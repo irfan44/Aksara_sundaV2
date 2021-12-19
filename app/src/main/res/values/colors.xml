@@ -17,9 +17,11 @@
     <color name="soal">#FFF7CC7F</color>
     <color name="main_menu">#FF232C80</color>
     <color name="btm_nav">#FFF5F6FC</color>
+    <color name="back">#FFF2F3F2</color>
 
-<!--    F7CC7F soal-->
-<!--    355389 <&#45;&#45; swara-->
+<!--    F7CC7F soal-->#
+
+    <!--    355389 <&#45;&#45; swara-->
 <!--    466EB6 <&#45;&#45; ngalagena-->
 <!--    96D9C9 <&#45;&#45; rarangken-->
 <!--    3C8F7C <&#45;&#45; pungtuasi-->
