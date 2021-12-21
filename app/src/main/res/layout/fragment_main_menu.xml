@@ -99,21 +99,45 @@
                         android:textColor="#2E2949"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:fontFamily="@font/medium"
-                        android:text="Materi"
-                        android:textColor="#232C80"
-                        android:textSize="18sp" />
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/medium"
+                            android:text="Materi"
+                            android:textColor="#232C80"
+                            android:textSize="18sp" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:id="@+id/buttonLihatSemua"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:padding="0dp"
+                            android:textAllCaps="false"
+                            android:layout_marginEnd="16dp"
+                            android:text="Lihat semua" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="220dp"
+                    android:layout_marginTop="240dp"
                     android:layout_marginBottom="20dp"
                     android:alignmentMode="alignMargins"
                     android:columnCount="2"
@@ -121,12 +145,12 @@
                     android:rowCount="8">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/ngalagena"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:onClick="ngalagena"
                         app:cardBackgroundColor="#466EB6"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -140,12 +164,14 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/swara"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:onClick="swara"
+                        android:clickable="true"
+                        android:focusable="auto"
                         app:cardBackgroundColor="#355389"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -159,11 +185,14 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/angka"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="auto"
                         android:onClick="angka"
                         app:cardBackgroundColor="#86B1F2"
                         app:cardCornerRadius="20dp"
@@ -178,12 +207,14 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/rarangken"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:onClick="rarangken"
+                        android:clickable="true"
+                        android:focusable="auto"
                         app:cardBackgroundColor="#96D9C9"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -197,11 +228,13 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/pungtuasi"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
+                        android:clickable="true"
                         android:onClick="pungtuasi"
                         app:cardBackgroundColor="#3C8F7C"
                         app:cardCornerRadius="20dp"
@@ -214,6 +247,7 @@
                             android:src="@drawable/card6" />
 
                     </androidx.cardview.widget.CardView>
+
 
                 </GridLayout>
 

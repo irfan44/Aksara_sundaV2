@@ -115,12 +115,12 @@
                     android:rowCount="8">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/ngalagena"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:onClick="ngalagena"
                         app:cardBackgroundColor="#466EB6"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -134,12 +134,14 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/swara"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:onClick="swara"
+                        android:clickable="true"
+                        android:focusable="auto"
                         app:cardBackgroundColor="#355389"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -153,11 +155,14 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/angka"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="auto"
                         android:onClick="angka"
                         app:cardBackgroundColor="#86B1F2"
                         app:cardCornerRadius="20dp"
@@ -172,12 +177,14 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/rarangken"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:onClick="rarangken"
+                        android:clickable="true"
+                        android:focusable="auto"
                         app:cardBackgroundColor="#96D9C9"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -191,11 +198,13 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/pungtuasi"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
+                        android:clickable="true"
                         android:onClick="pungtuasi"
                         app:cardBackgroundColor="#3C8F7C"
                         app:cardCornerRadius="20dp"
@@ -208,6 +217,7 @@
                             android:src="@drawable/card6" />
 
                     </androidx.cardview.widget.CardView>
+
 
                 </GridLayout>
 
