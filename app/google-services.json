@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "927417321874",
+    "project_id": "aksara-sunda-50768",
+    "storage_bucket": "aksara-sunda-50768.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927417321874:android:909ab6a680d7fd735c594b",
+        "android_client_info": {
+          "package_name": "com.aksun.aksarasunda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927417321874-e2324geacho4lfbc6dquvgj9sc6n3ar0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByWq9WPCcdCQNWIgnc15wSQ5ORwp5tJUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927417321874-e2324geacho4lfbc6dquvgj9sc6n3ar0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
