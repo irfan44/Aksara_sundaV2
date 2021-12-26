@@ -41,7 +41,9 @@ public class RegistrasiActivity extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        Toast.makeText(getApplicationContext(), "Kamu sudah masuk, silahkan ulang aplikasi", Toast.LENGTH_LONG).show();
+        if (currentUser != null) {
+            Toast.makeText(getApplicationContext(), "Kamu sudah masuk, silahkan ulang aplikasi", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void registerNewUser() {
