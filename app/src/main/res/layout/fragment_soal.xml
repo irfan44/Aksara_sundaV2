@@ -116,11 +116,13 @@
                     android:rowCount="8">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/soalHarian"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
+                        android:clickable="true"
                         android:onClick="soalpg"
                         app:cardBackgroundColor="#F7CC7F"
                         app:cardCornerRadius="20dp"
