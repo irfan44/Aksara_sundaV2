@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AksaraSunda">
         <activity
+            android:name=".ProgressSoalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SoalHarianActivity"
+            android:exported="false" />
+        <activity
             android:name=".PendahuluanAksaraActivity"
             android:exported="false" />
         <activity
