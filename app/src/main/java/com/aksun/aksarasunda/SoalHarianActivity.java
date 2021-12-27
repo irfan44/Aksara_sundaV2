@@ -38,7 +38,11 @@ public class SoalHarianActivity extends AppCompatActivity {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        DocumentReference docRef = db.collection("soal").document("soal_26dec21");
+        Intent intent = getIntent();
+
+        String noDocument = intent.getStringExtra("nomorDoc");
+
+        DocumentReference docRef = db.collection("soal").document(noDocument);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {

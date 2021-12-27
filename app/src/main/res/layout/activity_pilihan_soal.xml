@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProgressSoalActivity">
+    tools:context=".PilihanSoalActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -53,7 +53,7 @@
                     android:layout_marginEnd="40dp"
                     android:layout_marginBottom="30dp"
                     android:fontFamily="@font/bold"
-                    android:text="Progress Pengerjaan"
+                    android:text="Soal Harian"
                     android:textColor="#fff"
                     android:textSize="20sp" />
 
@@ -71,7 +71,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:orientation="vertical">
@@ -80,77 +80,26 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/medium"
-                        android:text="Pengertian"
-                        android:textColor="#232C80"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/book"
-                        android:text="@string/pengertian"
-                        android:textColor="#2E2949"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/medium"
-                        android:text="Pilihan"
+                        android:text="Pilihan Soal"
                         android:textColor="#232C80"
                         android:textSize="18sp" />
 
                 </LinearLayout>
 
-                <GridLayout
+                <LinearLayout
+                    android:id="@+id/pilihSoal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="220dp"
+                    android:layout_marginTop="60dp"
                     android:layout_marginBottom="20dp"
-                    android:alignmentMode="alignMargins"
-                    android:columnCount="2"
-                    android:columnOrderPreserved="false"
-                    android:rowCount="8">
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical"
+                    >
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        app:cardBackgroundColor="#F7CC7F"
-                        app:cardCornerRadius="20dp"
-                        app:cardElevation="2dp">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/card5" />
 
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        app:cardBackgroundColor="#F7CC7F"
-                        app:cardCornerRadius="20dp"
-                        app:cardElevation="2dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/card8" />
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
+                </LinearLayout>
 
             </com.github.captain_miao.optroundcardview.OptRoundCardView>
 

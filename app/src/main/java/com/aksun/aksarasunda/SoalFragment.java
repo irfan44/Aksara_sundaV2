@@ -25,7 +25,7 @@ public class SoalFragment extends Fragment {
         klikSoalHarian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SoalHarianActivity.class);
+                Intent intent = new Intent(getActivity(), PilihanSoalActivity.class);
                 startActivity(intent);
             }
         });

@@ -14,13 +14,13 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="title" parent="android:TextAppearance">
-        <item name="android:fontFamily">@font/medium</item>
-        <item name="android:textSize">20sp</item>
-    </style>
+<!--    <style name="title" parent="android:TextAppearance">-->
+<!--        <item name="android:fontFamily">@font/medium</item>-->
+<!--        <item name="android:textSize">20sp</item>-->
+<!--    </style>-->
 
-    <style name="titleExtend" parent="android:TextAppearance">
-        <item name="android:fontFamily">@font/medium</item>
-        <item name="android:textSize">22sp</item>
-    </style>
+<!--    <style name="titleExtend" parent="android:TextAppearance">-->
+<!--        <item name="android:fontFamily">@font/medium</item>-->
+<!--        <item name="android:textSize">22sp</item>-->
+<!--    </style>-->
 </resources>
