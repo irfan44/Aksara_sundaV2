@@ -89,8 +89,8 @@ public class SoalHarianActivity extends AppCompatActivity {
 
                                 } else {
                                     hasil = benar * 20;
-                //                    Intent selesai = new Intent(getApplicationContext(), hasilsoalpg.class);
-                //                    startActivity(selesai);
+                                    Intent selesai = new Intent(getApplicationContext(), HasilSoalActivity.class);
+                                    startActivity(selesai);
 //                                    Toast.makeText(getApplicationContext(),"Kamu Jawab Dulu"+hasil,Toast.LENGTH_LONG).show();
                                 }
                             }

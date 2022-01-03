@@ -58,9 +58,10 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="240dp"
+                    android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:src="@drawable/bgnew" />
+                    android:src="@drawable/bgnew"
+                    />
 
             </LinearLayout>
 
@@ -113,22 +114,6 @@
                             android:text="Materi"
                             android:textColor="#232C80"
                             android:textSize="18sp" />
-
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent" />
-
-                        <Button
-                            android:id="@+id/buttonLihatSemua"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0"
-                            android:padding="0dp"
-                            android:textAllCaps="false"
-                            android:layout_marginEnd="16dp"
-                            android:text="Lihat semua" />
 
                     </LinearLayout>
 
@@ -235,7 +220,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
                         android:clickable="true"
-                        android:onClick="pungtuasi"
+                        android:focusable="auto"
                         app:cardBackgroundColor="#3C8F7C"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -278,12 +263,14 @@
                     android:rowCount="8">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/soal"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:onClick="soalpg"
+                        android:clickable="true"
+                        android:focusable="auto"
                         app:cardBackgroundColor="#F7CC7F"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -297,12 +284,14 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/tebakgambar"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:onClick="soalgambar"
+                        android:clickable="true"
+                        android:focusable="auto"
                         app:cardBackgroundColor="#F7CC7F"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -337,12 +326,14 @@
                         android:textSize="18sp" />
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/konversi"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_gravity="center"
                         android:layout_marginStart="50dp"
-                        android:onClick="konversi"
+                        android:clickable="true"
+                        android:focusable="auto"
                         app:cardBackgroundColor="#F47458"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">

@@ -28,7 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainMenuFragment extends Fragment {
 
-    CardView klikNgalagena, klikSwara, klikRarangken, klikAngka;
+    CardView klikNgalagena, klikSwara, klikRarangken, klikAngka, klikPungtuasi, klikSoalHarian, klikTebakGambar, klikKonversi;
     Button lihatSemua;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -72,17 +72,10 @@ public class MainMenuFragment extends Fragment {
         klikSwara = view.findViewById(R.id.swara);
         klikAngka = view.findViewById(R.id.angka);
         klikRarangken = view.findViewById(R.id.rarangken);
-        lihatSemua = view.findViewById(R.id.buttonLihatSemua);
-
-        lihatSemua.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction fragmentTransaction = getActivity()
-                        .getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.flFragment, new MateriFragment());
-                fragmentTransaction.commit();
-            }
-        });
+        klikPungtuasi = view.findViewById(R.id.pungtuasi);
+        klikSoalHarian = view.findViewById(R.id.soal);
+        klikTebakGambar = view.findViewById(R.id.tebakgambar);
+        klikKonversi = view.findViewById(R.id.konversi);
 
         klikNgalagena.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +105,38 @@ public class MainMenuFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), AksaraRarangkenActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        klikPungtuasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), PungtuasiActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        klikSoalHarian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), PilihanSoalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        klikTebakGambar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), TebakGambarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        klikKonversi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), KonversiAksaraActivity.class);
                 startActivity(intent);
             }
         });

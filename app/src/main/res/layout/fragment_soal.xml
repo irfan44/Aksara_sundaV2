@@ -81,7 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/medium"
-                        android:text="Pengertian"
+                        android:text="Pendahuluan"
                         android:textColor="#232C80"
                         android:textSize="18sp" />
 
@@ -90,7 +90,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/book"
-                        android:text="@string/pengertian"
+                        android:text="Terdapat 2 jenis soal yang dapat dikerjakan, yaitu soal berupa pilihan ganda dan tebak gambar. Soal pilihan ganda akan ditambahkan secara dinamis sehingga terdapat soal baru untuk dikerjakan setiap harinya. Sedangkan tebak gambar dikerjakan dengan mengisi arti latin dari aksara sunda yang ditampilkan pada gambar"
                         android:textColor="#2E2949"
                         android:textSize="16sp" />
 
@@ -137,6 +137,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/tebakGambar"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"

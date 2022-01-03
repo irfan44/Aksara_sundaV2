@@ -80,7 +80,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/medium"
-                        android:text="Pengertian"
+                        android:text="Pendahuluan"
                         android:textColor="#232C80"
                         android:textSize="18sp" />
 

@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AksaraSunda">
         <activity
+            android:name=".HasilTebakGambarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TebakGambarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HasilSoalActivity"
+            android:exported="false" />
+        <activity
             android:name=".PilihanSoalActivity"
             android:exported="false" />
         <activity

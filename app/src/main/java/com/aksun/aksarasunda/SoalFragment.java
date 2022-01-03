@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 public class SoalFragment extends Fragment {
 
-    CardView klikSoalHarian;
+    CardView klikSoalHarian, klikTebakGambar;
     @Override
     public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); }
 
@@ -21,11 +21,20 @@ public class SoalFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_soal, container, false);
         klikSoalHarian = view.findViewById(R.id.soalHarian);
+        klikTebakGambar = view.findViewById(R.id.tebakGambar);
 
         klikSoalHarian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PilihanSoalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        klikTebakGambar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), TebakGambarActivity.class);
                 startActivity(intent);
             }
         });

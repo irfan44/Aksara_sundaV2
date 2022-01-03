@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#F7CC7F"
+    tools:context=".HasilTebakGambarActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hasil"
+        android:textSize="16sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:text="Hasil Jawaban Kamu"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nilai"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/bold"
+        android:layout_marginTop="15dp"
+        android:textColor="#000000"
+        android:textSize="65sp"
+        android:text="100"
+        />
+
+    <Button
+        android:id="@+id/buttonUlangi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:padding="14dp"
+        android:text="Ulangi"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:backgroundTint="@color/white"
+        app:cornerRadius="16dp"
+        />
+
+    <Button
+        android:id="@+id/buttonSelesai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:padding="14dp"
+        android:text="Selesai"
+        android:textAllCaps="false"
+        app:cornerRadius="16dp"
+        />
+
+</LinearLayout>

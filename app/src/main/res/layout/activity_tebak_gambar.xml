@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SoalHarianActivity">
+    tools:context=".TebakGambarActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -37,22 +37,18 @@
 
             <LinearLayout
                 android:layout_margin="20dp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:gravity="center"
                 android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="280dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kuis Sederhana"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/kuis"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/bold"
-                    android:textColor="#000000"
+                <ImageView
+                    android:id="@+id/imageView_tebak"
+                    android:layout_width="348dp"
+                    android:layout_height="244dp"
+                    android:background="@android:color/white"
+                    android:src="@drawable/pajajaran"
                     />
 
             </LinearLayout>
@@ -60,6 +56,7 @@
             <com.github.captain_miao.optroundcardview.OptRoundCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 app:optRoundCardLeftTopCorner="true"
                 app:optRoundCardRightTopCorner="true"
                 app:optRoundCardLeftBottomCorner="false"
@@ -69,46 +66,26 @@
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:id="@+id/pilihan"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/medium"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:text="Pilihan A"
-                            android:id="@+id/pilihanA"
-                            />
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/medium"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:text="Pilihan B"
-                            android:id="@+id/pilihanB"
-                            />
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/medium"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:text="Pilihan C"
-                            android:id="@+id/pilihanC"
-                            />
-
-                    </RadioGroup>
+                    <EditText
+                        android:layout_gravity="center"
+                        android:id="@+id/editText_jawab"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:inputType="textCapWords"
+                        android:fontFamily="@font/medium"
+                        android:textSize="16sp"
+                        android:focusedByDefault="true"
+                        android:hint="  Jawab disini"
+                        android:background="@drawable/texteditgambar"
+                        android:layout_weight="1"
+                        />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -116,18 +93,17 @@
                         android:layout_height="wrap_content">
 
                         <Button
-                            android:id="@+id/next"
-                            android:layout_width="match_parent"
+                            android:layout_margin="40dp"
+                            android:id="@+id/buttonNext"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginStart="32dp"
-                            android:layout_marginEnd="32dp"
-                            android:padding="14dp"
-                            android:text="Berikut"
+                            android:layout_gravity="center"
+                            android:background="@drawable/btnpg"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/bold"
+                            android:text="Berikutnya"
                             android:textAllCaps="false"
-                            app:cornerRadius="16dp"
                             />
-
 
                     </LinearLayout>
 
@@ -139,4 +115,4 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
