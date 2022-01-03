@@ -56,7 +56,7 @@ public class MainMenuFragment extends Fragment {
                         DocumentSnapshot document = task.getResult();
                         if (document.exists()) {
                             String name = (String) document.get("fullName");
-                            selamatDatang.setText("Wilujeng Sumping,\n" + name + "!");
+                            selamatDatang.setText("Wilujeng\nSumping,\n" + name + "!");
                             Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                         } else {
                             Log.d(TAG, "No such document");
@@ -144,44 +144,5 @@ public class MainMenuFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
-
-//    public void ngalagena (View view){
-//        Intent intent = new Intent(getActivity(), AksaraNgalagenaActivity.class);
-//        startActivity(intent);
-//    }
-
-//    public void swara (View view){
-//        Intent intent = new Intent(getActivity(), AksaraSwaraActivity.class);
-//        startActivity(intent);
-//    }
-//
-//    public void angka (View view){
-
-//    }
-//
-//    public void rarangken (View view){
-//        Intent intent = new Intent(getActivity(), AksaraRarangkenActivity.class);
-//        startActivity(intent);
-//    }
-//
-//    public void pungtuasi (View view){
-//        Intent intent = new Intent(getActivity(), PungtuasiActivity.class);
-//        startActivity(intent);
-//    }
-//
-////    public void soalpg (View view){
-////        Intent intent = new Intent(getActivity(), soalpg.class);
-////        startActivity(intent);
-////    }
-////
-////    public void soalgambar (View view){
-////        Intent intent = new Intent(getActivity(), soalgambar.class);
-////        startActivity(intent);
-////    }
-//
-//    public void konversi (View view){
-//        Intent intent = new Intent(getActivity(), KonversiAksaraActivity.class);
-//        startActivity(intent);
-//    }
 
 }
