@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), "Masuk berhasil!", Toast.LENGTH_LONG).show();
-                        FirebaseUser user = mAuth.getCurrentUser();
+                        FirebaseUser currentUser = mAuth.getCurrentUser();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                         Log.d("EmailPassword", "signInWithEmail:success");

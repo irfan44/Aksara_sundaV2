@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     MainMenuFragment mainMenuFragment = new MainMenuFragment();
     MateriFragment materiFragment = new MateriFragment();
     SoalFragment soalFragment = new SoalFragment();
+    ProfileFragment profileFragment = new ProfileFragment();
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -47,6 +48,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
             case R.id.soalmenu:
                 getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, soalFragment).commit();
+                return true;
+
+            case R.id.profilmenu:
+                getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, profileFragment).commit();
                 return true;
         }
         return false;

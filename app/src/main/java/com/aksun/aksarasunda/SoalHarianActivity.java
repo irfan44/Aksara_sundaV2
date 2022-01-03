@@ -75,8 +75,11 @@ public class SoalHarianActivity extends AppCompatActivity {
                                 RadioButton jawaban_user = (RadioButton) findViewById(rg.getCheckedRadioButtonId());
                                 String ambil_jawaban_user = jawaban_user.getText().toString();
                                 rg.check(0);
-                                if (ambil_jawaban_user.equalsIgnoreCase(jawaban.get(nomor))) benar++;
-                                else salah++;
+                                if (ambil_jawaban_user.equalsIgnoreCase(jawaban.get(nomor))) {
+                                    benar++;
+                                } else {
+                                    salah++;
+                                }
                                 nomor++;
                                 if (nomor < soal.size()) {
                                     kuis.setText(soal.get(nomor));
