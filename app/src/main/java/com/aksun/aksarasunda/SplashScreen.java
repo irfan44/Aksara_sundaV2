@@ -16,11 +16,11 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             //This method will be executed once the timer is over
             // Start your app main activity
-            Intent i = new Intent(SplashScreen.this, LandingActivity.class);
+            Intent i = new Intent(SplashScreen.this, LoginActivity.class);
             startActivity(i);
             // close this activity
             finish();
-        }, 3000);
+        }, 2000);
 
     }
 }
