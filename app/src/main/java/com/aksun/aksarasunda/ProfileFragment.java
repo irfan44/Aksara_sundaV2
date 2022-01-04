@@ -30,7 +30,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class ProfileFragment extends Fragment {
 
     Button signOut;
-    ImageView fotoProfil;
+    ImageButton fotoProfil;
     TextView emailView, fullNameView;
     ImageButton editButton;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -49,7 +49,7 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         signOut = view.findViewById(R.id.keluar);
-        fotoProfil = (ImageView) view.findViewById(R.id.fotoProfil); //masi belum kepanggil ini, ntar benerin coba
+        fotoProfil = view.findViewById(R.id.fotoProfil); //masi belum kepanggil ini, ntar benerin coba
         emailView = view.findViewById(R.id.email);
         fullNameView = view.findViewById(R.id.fullName);
         editButton = view.findViewById(R.id.editButton);
@@ -66,8 +66,25 @@ public class ProfileFragment extends Fragment {
                         if (document.exists()) {
                             String fullName = (String) document.get("fullName");
                             String email = (String) document.get("email");
+                            String avatar = (String) document.get("avatar");
+                            switch(avatar){
+                                case "laki1":
+                                    fotoProfil.setImageResource(R.drawable.laki1);
+                                    break;
+                                case "laki2":
+                                    fotoProfil.setImageResource(R.drawable.laki2);
+                                    break;
+                                case "pr1":
+                                    fotoProfil.setImageResource(R.drawable.pr1);
+                                    break;
+                                case "pr2":
+                                    fotoProfil.setImageResource(R.drawable.pr2);
+                                    break;
+                            }
+
                             fullNameView.setText(fullName);
                             emailView.setText(email);
+
                             Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                         } else {
                             Log.d(TAG, "No such document");
@@ -89,6 +106,19 @@ public class ProfileFragment extends Fragment {
                 dialog.show(getFragmentManager(), "EditProfilFragment");
             }
         });
+
+        fotoProfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: opening dialog");
+
+                EditAvatarFragment dialog = new EditAvatarFragment();
+                dialog.setTargetFragment(ProfileFragment.this, 1);
+                dialog.show(getFragmentManager(), "EditAvatarFragment");
+            }
+        });
+
+
 
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override

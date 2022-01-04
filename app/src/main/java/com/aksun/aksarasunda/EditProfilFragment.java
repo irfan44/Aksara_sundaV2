@@ -34,9 +34,9 @@ public class EditProfilFragment extends DialogFragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_edit_profil_dialog, container, false);
-        Button cancelButton = view.findViewById(R.id.button_cancel);
-        Button saveButton = view.findViewById(R.id.button_save);
-        EditText namaUpdate = view.findViewById(R.id.namaUpdate);
+        Button cancelButton = view.findViewById(R.id.buttonKembali);
+        Button saveButton = view.findViewById(R.id.buttonSimpan);
+        EditText namaLengkap = view.findViewById(R.id.namaLengkap);
 
         String emailCheck = currentUser.getEmail();
         // Memanggil document menggunakan email sebagai referensi
@@ -48,7 +48,7 @@ public class EditProfilFragment extends DialogFragment {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
                         String fullName = (String) document.get("fullName");
-                        namaUpdate.setText(fullName);
+                        namaLengkap.setText(fullName);
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                     } else {
                         Log.d(TAG, "No such document");
@@ -63,7 +63,7 @@ public class EditProfilFragment extends DialogFragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "Profil berhasil diubah", Toast.LENGTH_LONG).show();
-                String fullName = namaUpdate.getText().toString();
+                String fullName = namaLengkap.getText().toString();
                 DocumentReference docRef = db.collection("users").document(emailCheck);
                 docRef
                         .update("fullName", fullName)
