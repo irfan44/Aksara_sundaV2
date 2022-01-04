@@ -37,7 +37,15 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        btnLogin.setOnClickListener(v -> loginUserAccount());
+        btnLogin.setOnClickListener(v -> {
+            if (emailInput.getText().toString().isEmpty() || passInput.getText().toString().isEmpty()){
+                Toast.makeText(getApplicationContext(), "Masukan data yang diperlukan terlebih dahulu", Toast.LENGTH_LONG).show();
+            }
+            else{
+                loginUserAccount();
+            }
+        });
+
         btnReg.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, RegistrasiActivity.class);
             startActivity(intent);

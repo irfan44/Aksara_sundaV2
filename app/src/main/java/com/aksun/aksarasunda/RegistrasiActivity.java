@@ -43,7 +43,14 @@ public class RegistrasiActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        btnBA.setOnClickListener(v -> registerNewUser());
+        btnBA.setOnClickListener(v -> {
+            if (emailInput.getText().toString().isEmpty() || passInput.getText().toString().isEmpty() || fullNameInput.getText().toString().isEmpty()){
+                Toast.makeText(getApplicationContext(), "Masukan data yang diperlukan terlebih dahulu", Toast.LENGTH_LONG).show();
+            }
+            else{
+                registerNewUser();
+            }
+        });
     }
 
     @Override
