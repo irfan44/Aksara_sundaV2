@@ -49,6 +49,7 @@
                     android:text="Kuis Sederhana"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
+                    android:layout_marginHorizontal="32dp"
                     android:id="@+id/kuis"
                     android:textSize="20sp"
                     android:fontFamily="@font/bold"
