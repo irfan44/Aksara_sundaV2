@@ -89,7 +89,7 @@ public class RegistrasiActivity extends AppCompatActivity {
                                     });
 
                             FirebaseUser currentUser = mAuth.getCurrentUser();
-                            Intent intent = new Intent(RegistrasiActivity.this, MainActivity.class);
+                            Intent intent = new Intent(RegistrasiActivity.this, PilihAvatarActivity.class);
                             startActivity(intent);
 
                         } else {
