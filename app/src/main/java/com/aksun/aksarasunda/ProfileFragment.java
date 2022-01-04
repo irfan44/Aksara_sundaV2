@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class ProfileFragment extends Fragment {
     Button signOut;
     ImageView fotoProfil;
     TextView emailView, fullNameView;
+    ImageButton editButton;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -50,6 +52,7 @@ public class ProfileFragment extends Fragment {
         fotoProfil = (ImageView) view.findViewById(R.id.fotoProfil); //masi belum kepanggil ini, ntar benerin coba
         emailView = view.findViewById(R.id.email);
         fullNameView = view.findViewById(R.id.fullName);
+        editButton = view.findViewById(R.id.editButton);
 
         if (currentUser != null){
             String emailCheck = currentUser.getEmail();
@@ -76,7 +79,16 @@ public class ProfileFragment extends Fragment {
             });
         }
 
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: opening dialog");
 
+                EditProfilFragment dialog = new EditProfilFragment();
+                dialog.setTargetFragment(ProfileFragment.this, 1);
+                dialog.show(getFragmentManager(), "EditProfilFragment");
+            }
+        });
 
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
