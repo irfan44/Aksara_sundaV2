@@ -72,11 +72,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void onBackPressed() {
+
         if (pressedTime + 2000 > System.currentTimeMillis()) {
             super.onBackPressed();
-            finish();
+            finishAffinity();
         } else {
-            Toast.makeText(getBaseContext(), "Tekan kembali untuk keluar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
         }
         pressedTime = System.currentTimeMillis();
     }
